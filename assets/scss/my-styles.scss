@@ -1,0 +1,79 @@
+// * { background-color: rgba(255,0,0,.2); }
+// * * { background-color: rgba(0,255,0,.2); }
+// * * * { background-color: rgba(0,0,255,.2); }
+// * * * * { background-color: rgba(255,0,255,.2); }
+// * * * * * { background-color: rgba(0,255,255,.2); }
+// * * * * * * { background-color: rgba(255,255,0,.2); }
+// * * * * * * * { background-color: rgba(255,0,0,.2); }
+// * * * * * * * * { background-color: rgba(0,255,0,.2); }
+// * * * * * * * * * { background-color: rgba(0,0,255,.2); }
+body {
+  padding-top: 3.25rem;
+}
+
+.title, .subtitle {
+  word-break: normal;
+}
+
+.has-text-teal {
+  color: $teal !important;
+}
+
+.is-teal {
+  background: $teal !important;
+}
+
+.has-font-roboto-slab {
+  font-family: $title-font !important;
+}
+
+.jtron-logotype {
+  font-family: $title-font;
+  color: $teal !important;
+}
+
+/* Helpers */
+.gap-bottom {
+  margin-bottom: $gap;
+}
+
+/* Folio Tiles */
+.folio-tile.box {
+  padding: 0;
+  overflow: hidden;
+}
+
+.folio-tile img {
+  transition: all 0.6s;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
+/* Nav mods */
+.hero .navbar {
+  background: #fff;
+}
+
+.jtron-main {
+  margin-top: 32px;
+  @include until($desktop) {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+[lazy='loaded'] {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
